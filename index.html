@@ -58,9 +58,9 @@
         }
         
         h1 {
-            font-size: 4em;
+            font-size: 5em;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             background: linear-gradient(45deg, #ff6b6b, #ff8e53, #fe6196);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -69,17 +69,17 @@
         }
         
         h2 {
-            font-size: 3em;
+            font-size: 3.8em;
             font-weight: 600;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             color: #fff;
             text-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
         }
         
         h3 {
-            font-size: 2em;
+            font-size: 2.5em;
             font-weight: 400;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             color: #ff8e53;
         }
         
@@ -89,9 +89,16 @@
         }
         
         .content {
-            max-width: 1200px;
+            max-width: 1400px;
             text-align: center;
             animation: fadeUp 0.8s ease-out 0.3s both;
+            transform: scale(1.15);
+            transform-origin: center;
+        }
+        
+        /* Exception for slide 2 - keep original scale */
+        .slide:nth-child(2) .content {
+            transform: scale(1);
         }
         
         @keyframes fadeUp {
@@ -108,16 +115,16 @@
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 50px;
+            gap: 50px;
+            margin-top: 60px;
         }
         
         .stat-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 40px;
+            border-radius: 25px;
+            padding: 50px;
             transition: all 0.3s ease;
             animation: fadeIn 0.8s ease-out;
         }
@@ -129,7 +136,7 @@
         }
         
         .stat-number {
-            font-size: 3em;
+            font-size: 3.5em;
             font-weight: 700;
             background: linear-gradient(45deg, #ff6b6b, #fe6196);
             -webkit-background-clip: text;
@@ -138,9 +145,9 @@
         }
         
         .stat-label {
-            font-size: 1.2em;
+            font-size: 1.4em;
             color: #ccc;
-            margin-top: 10px;
+            margin-top: 15px;
         }
         
         .highlight-box {
@@ -160,10 +167,10 @@
         
         .list-item {
             text-align: left;
-            margin: 20px 0;
-            padding-left: 30px;
+            margin: 25px 0;
+            padding-left: 40px;
             position: relative;
-            font-size: 1.4em;
+            font-size: 1.7em;
             line-height: 1.8;
             animation: slideInLeft 0.6s ease-out;
         }
@@ -196,12 +203,13 @@
             display: inline-block;
             color: #ff8e53;
             text-decoration: none;
-            margin: 10px 0;
-            padding: 10px 20px;
+            margin: 15px 0;
+            padding: 15px 30px;
             border: 2px solid #ff8e53;
-            border-radius: 30px;
+            border-radius: 35px;
             transition: all 0.3s ease;
             background: rgba(255, 142, 83, 0.1);
+            font-size: 1.2em;
         }
         
         .video-link:hover {
@@ -363,11 +371,202 @@
             width: 300px;
             height: 300px;
         }
+
+        .vertical-placeholder {
+            width: 270px;
+            height: 480px;
+        }
         
         .platform-logo {
             width: 80px;
             height: 80px;
             margin: 0 auto 10px;
+        }
+
+        /* 40/60 Layout Container */
+        .intro-container {
+            display: flex;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 80vh;
+        }
+
+        /* Left Section - 40% width */
+        .left-section {
+            flex: 0 0 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .main-image {
+            flex: 1.4;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(255, 107, 107, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .main-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 35px 70px rgba(255, 107, 107, 0.4);
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .text-content {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .main-name {
+            font-size: 3.5em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff6b6b, #fe6196);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .channel-subtitle {
+            font-size: 1.8em;
+            color: #ff8e53;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .position {
+            font-size: 1.4em;
+            color: #ccc;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .logo-row {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 20px 0;
+        }
+
+        .company-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .company-logo:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ff6b6b;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        /* Right Section - 60% width */
+        .right-section {
+            flex: 0 0 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .profile-card {
+            flex: 1;
+            display: flex;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 107, 107, 0.4);
+            transform: translateX(10px);
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);
+        }
+
+        .card-image {
+            flex: 0 0 60%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .platform-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover .platform-image {
+            transform: scale(1.1);
+        }
+
+        .card-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .platform-name {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #ff8e53;
+            margin-bottom: 15px;
+        }
+
+        .follower-count {
+            font-size: 3em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff6b6b, #fe6196);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .follower-text {
+            font-size: 1.2em;
+            color: #ccc;
+            font-weight: 500;
+        }
+
+        /* Platform-specific styling */
+        .tiktok-card:hover {
+            border-color: rgba(255, 107, 107, 0.6);
+        }
+
+        .instagram-card:hover {
+            border-color: rgba(255, 142, 83, 0.6);
+        }
+
+        .youtube-card:hover {
+            border-color: rgba(254, 97, 150, 0.6);
         }
     </style>
 </head>
@@ -390,36 +589,66 @@
             <span class="slide-number">2/13</span>
             <div class="content">
                 <h2>แนะนำตัว</h2>
-                <div class="highlight-box" style="max-width: 800px;">
-                    <h3 style="color: #fff;">คุณเข้ม</h3>
-                    <img src="https://lh3.googleusercontent.com/d/1aY3MIStrkQofUjy1gBpPuEvWt0FtX3P_" alt="คุณเข้ม Profile" style="width: 652px; height: 274px; object-fit: cover; border-radius: 15px; margin: 20px auto; display: block;">
-                    <p style="font-size: 1.3em; margin: 20px 0;">ผู้บริหาร</p>
-                    <div class="logo-grid">
-                        <div class="image-placeholder logo-placeholder">
-                            <img src="https://lh3.googleusercontent.com/d/1JqFdvr5b4IVXzjJ7Xyvj0TSRlcoZi6G-" alt="Hairsmith Clinic Logo">
+                <div class="intro-container">
+                    <!-- Left Section (40%) -->
+                    <div class="left-section">
+                        <!-- Main Image -->
+                        <div class="main-image">
+                            <img src="https://lh3.googleusercontent.com/d/1yWfz4tTaJYuN8eQzVBV4ouMfo0IlhUPx" alt="คุณเข้ม Profile" class="profile-photo">
                         </div>
-                        <div class="image-placeholder logo-placeholder">
-                            <img src="https://lh3.googleusercontent.com/d/1g7400SDUMt-5SjrPKmqfQhm849eCVcUW" alt="Hairtran Clinic Logo">
+                        
+                        <!-- Text Content -->
+                        <div class="text-content">
+                            <h3 class="main-name">เข้ม</h3>
+                            <h4 class="channel-subtitle">Pris Tima | เรื่องของผม</h4>
+                            <p class="position">ตำแหน่ง : ผู้บริหาร</p>
                         </div>
-                        <div class="image-placeholder logo-placeholder">
-                            <img src="https://lh3.googleusercontent.com/d/1ww7lUllJyfP25OCwJIBic7E-SnJaJdel" alt="Kemist Labs Logo">
+                        
+                        <!-- Logo Row -->
+                        <div class="logo-row">
+                            <img src="https://lh3.googleusercontent.com/d/1JqFdvr5b4IVXzjJ7Xyvj0TSRlcoZi6G-" alt="Hairsmith Clinic" class="company-logo">
+                            <img src="https://lh3.googleusercontent.com/d/1g7400SDUMt-5SjrPKmqfQhm849eCVcUW" alt="Hairtran Clinic" class="company-logo">
+                            <img src="https://lh3.googleusercontent.com/d/1ww7lUllJyfP25OCwJIBic7E-SnJaJdel" alt="Kemist Labs" class="company-logo">
                         </div>
                     </div>
-                    <div class="section-divider"></div>
-                    <h3 style="color: #fff; margin-top: 30px;">Pris Tima | เรื่องของผม</h3>
-                </div>
-                <div class="stats-grid" style="margin-top: 50px;">
-                    <div class="stat-card">
-                        <div class="stat-number">57.5K</div>
-                        <div class="stat-label">TikTok</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">18.5K</div>
-                        <div class="stat-label">Instagram</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">12.4K</div>
-                        <div class="stat-label">YouTube</div>
+                    
+                    <!-- Right Section (60%) -->
+                    <div class="right-section">
+                        <!-- TikTok Profile Card -->
+                        <div class="profile-card tiktok-card">
+                            <div class="card-image">
+                                <img src="https://lh3.googleusercontent.com/d/1aY3MIStrkQofUjy1gBpPuEvWt0FtX3P_" alt="TikTok Profile" class="platform-image">
+                            </div>
+                            <div class="card-info">
+                                <div class="platform-name">TikTok</div>
+                                <div class="follower-count">57,500</div>
+                                <div class="follower-text">ผู้ติดตาม</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Instagram Profile Card -->
+                        <div class="profile-card instagram-card">
+                            <div class="card-image">
+                                <img src="https://lh3.googleusercontent.com/d/1-JEQL4s5aEG3E8CYPaGEu6BEu3GSSSWf" alt="Instagram Profile" class="platform-image">
+                            </div>
+                            <div class="card-info">
+                                <div class="platform-name">Instagram</div>
+                                <div class="follower-count">18,500</div>
+                                <div class="follower-text">ผู้ติดตาม</div>
+                            </div>
+                        </div>
+                        
+                        <!-- YouTube Profile Card -->
+                        <div class="profile-card youtube-card">
+                            <div class="card-image">
+                                <img src="https://lh3.googleusercontent.com/d/1cQybKFsZlxHNyovl-xoTL74J9TuUAUqp" alt="YouTube Profile" class="platform-image">
+                            </div>
+                            <div class="card-info">
+                                <div class="platform-name">YouTube</div>
+                                <div class="follower-count">12,400</div>
+                                <div class="follower-text">ผู้ติดตาม</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -560,7 +789,7 @@
                 <h2>ตัวอย่างคอนเทนต์ความชอบส่วนตัว</h2>
                 <div style="display: flex; gap: 40px; justify-content: center; margin-top: 50px;">
                     <div style="text-align: center;">
-                        <div class="image-placeholder square-placeholder" style="margin: 0 auto 20px;">
+                        <div class="image-placeholder vertical-placeholder" style="margin: 0 auto 20px;">
                             <img src="https://lh3.googleusercontent.com/d/1s6uWiKyBgcbXmkmOpmwKNusAFU1Htxbu" alt="Vacheron Constantin">
                         </div>
                         <h3 style="color: #fff; font-size: 1.5em;">Vacheron Constantin</h3>
@@ -569,7 +798,7 @@
                         </a>
                     </div>
                     <div style="text-align: center;">
-                        <div class="image-placeholder square-placeholder" style="margin: 0 auto 20px;">
+                        <div class="image-placeholder vertical-placeholder" style="margin: 0 auto 20px;">
                             <img src="https://lh3.googleusercontent.com/d/1HnlQB7nf9rKns_JcIC7Y78opFiBljrP1" alt="Jaeger LeCoultre">
                         </div>
                         <h3 style="color: #fff; font-size: 1.5em;">Jaeger LeCoultre</h3>
